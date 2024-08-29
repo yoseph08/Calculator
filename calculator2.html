@@ -4,8 +4,9 @@
 <body>
 <h1> Calculator </h1>
 
-<input type="text" class="calculator-screen" value="" <br>
+<input id="dislay" type="number" class="calculator-screen"<br>
   
+
     <div class="calculator-keys">
   
       <button type="button" class="operator" value="+" onclick="dis('+')">+</button>
@@ -13,19 +14,20 @@
       <button type="button" class="operator" value="*" onclick="dis('*')">*</button>
       <button type="button" class="operator" value="/" onclick="dis('/')">/</button> <br>
   
-      <button type="button" value="7" onclick="dis('7')">7</button>
+      <button type="button" onclick="dis(7)">7</button>
       <button type="button" value="8" onclick="dis('8')">8</button>
-      <button type="button" value="9" onclick="dis('8')">9</button><br>
+      <button type="button" value="9" onclick="dis('8')">9</button> <br>
   
   
       <button type="button" value="4" onclick="dis('4')">4</button>
       <button type="button" value="5" onclick="dis('5')">5</button>
-      <button type="button" value="6" onclick="dis('6')">6</button><br>
+      <button type="button" value="6" onclick="dis('6')">6</button> <br>
   
   
-      <button type="button" value="1" onclick="dis('1')">1</button>
+      <button type="button" value="1" onclick="dis('1')">1</button>:
+        
       <button type="button" value="2" onclick="dis('2')">2</button>
-      <button type="button" value="3" onclick="dis('3')">3</button><br>
+      <button type="button" value="3" onclick="dis('3')">3</button> <br>
   
   
       <button type="button" value="0" onclick="dis('0')">0</button>
@@ -68,6 +70,14 @@ function Calculator(){
     }
      
     
+}
+
+function dis(number){
+    let result = document.getElementById("display");
+    result.value=number;
+
+
+
 }
 
 </script>
