@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1> Calculator </h1>
+
+<input type="text" class="calculator-screen" value="" <br>
+  
+    <div class="calculator-keys">
+  
+      <button type="button" class="operator" value="+" onclick="dis('+')">+</button>
+      <button type="button" class="operator" value="-" onclick="dis('-')">-</button>
+      <button type="button" class="operator" value="*" onclick="dis('*')">*</button>
+      <button type="button" class="operator" value="/" onclick="dis('/')">/</button> <br>
+  
+      <button type="button" value="7" onclick="dis('7')">7</button>
+      <button type="button" value="8" onclick="dis('8')">8</button>
+      <button type="button" value="9" onclick="dis('8')">9</button><br>
+  
+  
+      <button type="button" value="4" onclick="dis('4')">4</button>
+      <button type="button" value="5" onclick="dis('5')">5</button>
+      <button type="button" value="6" onclick="dis('6')">6</button><br>
+  
+  
+      <button type="button" value="1" onclick="dis('1')">1</button>
+      <button type="button" value="2" onclick="dis('2')">2</button>
+      <button type="button" value="3" onclick="dis('3')">3</button><br>
+  
+  
+      <button type="button" value="0" onclick="dis('0')">0</button>
+      <button type="button" class="decimal" value="." onclick="dis('.')">.</button>
+      <button type="button" class="all-clear" value="all-clear" onclick="clr()">AC</button>        
+  </div>
+
+<p>Enter a number</p>
+
+    <input type="number" id="msg1" ><br>
+    
+<p>Enter a number</p>
+    <input type="number" id="msg2" ><br>
+    
+<p>Enter an operator</p>
+    <input type="text" id="op" ><br>
+
+<button onclick="Calculator()">Click me</button>
+    
+    
+<p>result</p>
+     <input type="number" id="result" readonly>
+     
+<script>
+function Calculator(){
+    
+    let int1 = document.getElementById("msg1").value;
+    let int2 = document.getElementById("msg2").value;
+    let operator = document.getElementById("op").value;
+    let result = document.getElementById("result");
+    if(operator === '-'){
+        result.value= Number(int1) - Number(int2);
+    }else if(operator === '+'){
+        result.value= Number(int1) + Number(int2);             
+    }else if(operator === '/'){
+        result.value= Number(int1) / Number(int2);        
+        
+    }else if(operator === '*'){
+        result.value= Number(int1) * Number(int2);
+    }
+     
+    
+}
+
+</script>
+
+</body>
+</html>
+
+
